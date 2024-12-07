@@ -1,0 +1,905 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+
+/* Custom CSS for Navbar */
+.navbar {
+  background-color: #fff; /* Clean white background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-bottom: 3px solid #28a745; /* Bold green border for a fresh, modern look */
+  padding: 15px 30px;
+  transition: all 0.3s ease-in-out; /* Smooth transition on hover effects */
+}
+
+.navbar-brand img {
+  width: 100px; /* Increased from 60px to 100px */
+  height: auto; /* Keeps the aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1); /* Optional: Slight zoom on hover */
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 1rem; /* Slightly larger and bolder links */
+  color: #333;
+  padding: 10px 20px;
+  position: relative;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #28a745; /* Green hover effect */
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #28a745; /* Green underline on hover */
+  transition: width 0.3s;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px;
+}
+
+.dropdown-menu {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Smooth shadow for dropdown */
+  margin-top: 15px; /* Slight separation from navbar */
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-item {
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #28a745; /* Green background on hover */
+  color: white;
+  border-radius: 5px; /* Rounded corners on hover */
+}
+
+
+
+
+.form-control {
+  border-radius: 25px; /* Fully rounded search bar */
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  box-shadow: none; /* Remove default shadow */
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #28a745; /* Green border when focused */
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Soft green shadow */
+}
+
+.btn-outline-success {
+  border-color: #28a745;
+  color: #28a745;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745; /* Green background on hover */
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .navbar-brand img {
+    width: 50px; /* Resize logo for smaller screens */
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 10px;
+  }
+
+  .form-control {
+    width: 100%; /* Full-width search bar on smaller screens */
+  }
+}
+
+
+
+
+
+
+
+/* Hero Section Styles */
+.section {
+    padding: 50px 15px; /* Add padding for mobile view */
+}
+
+#home {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+}
+
+#home h2 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#home p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Carousel Styles */
+
+.text-center {
+    padding-top: 100px; /* Add 50px of top padding */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 50px; 
+}
+
+p {
+    font-size: 1.1rem;
+    color: #bababa;
+    margin-top: 10px;
+}
+
+
+.carousel-inner {
+    padding: 2rem 0;
+    background-color: #f8f9fa; /* Light background for carousel */
+    border-radius: 10px;
+}
+
+.carousel-item {
+    padding: 1rem;
+}
+
+.carousel-item.active {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.carousel-item .text-center {
+    margin: 1rem;
+    flex-grow: 1;
+}
+
+.carousel-item img {
+    height: 100px;
+    width: auto;
+    filter: grayscale(50%); /* Subtle effect */
+    transition: filter 0.1s ease;
+}
+
+.carousel-item img:hover {
+    filter: grayscale(50%); /* Remove grayscale on hover */
+}
+
+.carousel-item p {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #007bff; /* Blue background for controls */
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+    background-color: #0056b3; /* Darker on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .carousel-item {
+        flex-direction: column;
+    }
+
+    .carousel-item img {
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+/* Top sales */
+
+/* General Section Styling */
+.top-sales-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 15px;
+    background: linear-gradient(135deg, #e0f7fa, #bbdefb);
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.top-sales-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a237e;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #42a5f5, #1e88e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.top-sales-description {
+    font-size: 1.2rem;
+    color: #607d8b;
+    margin-bottom: 40px;
+}
+
+/* Carousel Styling */
+#topSalesCarouselNew {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    padding: 2rem 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.carousel-item {
+    padding: 1rem;
+}
+
+.sales-item-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sales-item {
+    margin: 1rem;
+    flex-grow: 1;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sales-item:hover {
+    transform: scale(1.05);
+}
+
+.sales-item-img {
+    height: 120px;
+    width: auto;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.sales-item-img:hover {
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.3));
+    transform: rotate(5deg);
+}
+
+.sales-item-text {
+    font-weight: 700;
+    color: #1a237e;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+}
+
+.sales-item-price {
+    font-size: 1.2rem;
+    color: #388e3c; /* Green color for price */
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.add-to-cart-btn {
+    background-color: #42a5f5; /* Light blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #1e88e5; /* Darker blue on hover */
+}
+
+.sales-item:hover .sales-item-text {
+    color: #42a5f5;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #42a5f5; /* Light blue background for controls */
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #1e88e5; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sales-item-wrapper {
+        flex-direction: column;
+    }
+
+    .sales-item-img {
+        height: 100px;
+    }
+
+    .top-sales-title {
+        font-size: 2.2rem;
+    }
+
+    .top-sales-description {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* About Us Section Styles */
+/* About Us Section Styling */
+#about {
+  background-color: #f0f4f8; /* Light background */
+  padding: 80px 0; /* More padding for spacing */
+  border-top: 4px solid #28a745; /* Green accent border */
+  border-bottom: 4px solid #28a745;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Title Styling */
+.section-title {
+  font-size: 2.8rem; /* Larger title */
+  font-weight: 700; /* Bold */
+  color: #28a745; /* Green color */
+  margin-bottom: 20px; /* Spacing below */
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: #28a745; /* Green underline */
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* Section Description Styling */
+.section-description {
+  font-size: 1.2rem;
+  color: #6c757d; /* Muted grey color */
+  line-height: 1.8;
+  max-width: 800px; /* Restrict width for better readability */
+  margin: 0 auto 40px auto; /* Center text with spacing */
+}
+
+/* Button Styling */
+.learn-more-btn {
+  font-size: 1.1rem;
+  padding: 12px 30px; /* Spacious padding */
+  border-color: #28a745; /* Green border */
+  color: #28a745; /* Green text */
+  border-radius: 30px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth hover */
+}
+
+.learn-more-btn:hover {
+  background-color: #28a745;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(40, 167, 69, 0.2); /* Shadow on hover */
+}
+
+/* Modal Styling */
+.modal-content {
+  border-radius: 12px; /* Smooth edges */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Elevated shadow */
+}
+
+.modal-header {
+  background-color: #28a745; /* Green background */
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.modal-body {
+  font-size: 1.1rem;
+  color: #6c757d;
+  line-height: 1.6;
+  padding: 20px 30px;
+}
+
+.modal-footer .btn-secondary {
+  background-color: #28a745; /* Green background for close button */
+  border-color: #28a745;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .learn-more-btn {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+
+
+
+/* Services Section Styles */
+/* Services Section Styling */
+#services {
+  background-color: #e3f2fd; /* Light blue background */
+  padding: 80px 0;
+  border-top: 4px solid #0d6efd; /* Blue accent border */
+  border-bottom: 4px solid #0d6efd;
+}
+
+/* Section Title Styling */
+#services h2 {
+  font-size: 2.8rem;
+  color: #0d6efd; /* Blue color */
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+#services h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #0d6efd;
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 5px;
+}
+
+/* Accordion Styling */
+.accordion-button {
+  background-color: #0d6efd; /* Blue background */
+  color: white; /* White text */
+  font-size: 1.2rem;
+  padding: 15px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #0056b3; /* Darker blue when open */
+  color: white;
+}
+
+.accordion-button:hover {
+  background-color: #0056b3;
+}
+
+.accordion-header {
+  border-bottom: 1px solid #dee2e6; /* Separator line */
+}
+
+.accordion-body {
+  font-size: 1.1rem;
+  background-color: #ffffff;
+  padding: 20px;
+  color: #6c757d;
+  border-left: 4px solid #0d6efd; /* Left blue border */
+  border-radius: 0 10px 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-body:hover {
+  background-color: #f1f9ff; /* Light hover effect */
+}
+
+/* Accordion Item Styling */
+.accordion-item {
+  margin-bottom: 15px;
+  border: none; /* Remove border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #services h2 {
+    font-size: 2.2rem;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .accordion-body {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* Advanced Testimonials Section Styling */
+#testimonials {
+    background: linear-gradient(135deg, #007bff 0%, #5a9eff 100%);
+    padding: 80px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+#testimonials::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+    animation: floating 6s infinite ease-in-out;
+}
+
+/* Heading Styling with Black Color and Border */
+#testimonials h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000; /* Black font color */
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+    padding: 10px 20px;
+    border: 2px solid #000; /* Black collar (border) */
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight background to make text stand out */
+    border-radius: 10px;
+}
+
+.blockquote {
+    position: relative;
+    margin: 30px auto;
+    max-width: 750px;
+    padding: 40px 50px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-left: 10px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.blockquote:hover {
+    transform: scale(1.05);
+}
+
+.blockquote::before {
+    content: "“";
+    font-size: 60px;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: 'Georgia', serif;
+}
+
+.blockquote p {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #fff; /* Font color for testimonials */
+    position: relative;
+    z-index: 1;
+}
+
+.blockquote-footer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e6f7ff; /* Customer name color */
+    margin-top: 20px;
+}
+
+.blockquote-footer cite {
+    font-style: normal;
+    font-weight: 500;
+    color: #ffecb3; /* Additional designation color */
+}
+
+@media (max-width: 768px) {
+    #testimonials h2 {
+        font-size: 2.5rem;
+    }
+
+    .blockquote {
+        padding: 30px 30px;
+    }
+
+    .blockquote p {
+        font-size: 1.25rem;
+    }
+
+    .blockquote-footer {
+        font-size: 1rem;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* Custom Footer Styling */
+.footer-content {
+  background-color: #f8f9fa; /* Light background */
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 5px solid #28a745; /* Bold green top border */
+  color: #6c757d; /* Muted text color */
+}
+
+.footer-logo {
+  width: 250px; /* Adjust the size of the logo */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-content h5 {
+  color: #28a745; /* Green color for headings */
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.footer-content p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-content ul li {
+  margin-bottom: 10px;
+}
+
+.footer-content ul li a {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-content ul li a:hover {
+  color: #28a745; /* Green hover effect */
+}
+
+.footer-content a {
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: #28a745; /* Green hover effect on icons */
+}
+
+.footer-content i {
+  font-size: 1.5rem;
+}
+
+.footer-content .col-lg-3 {
+  margin-bottom: 20px;
+}
+
+.footer-content .col-12 {
+  padding-top: 10px;
+  border-top: 1px solid #dee2e6;
+}
+
+
+
+
+
+
+/* Container styling for the homepage items */
+.container {
+    padding: 20px;
+}
+
+/* Row styling for alignment */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adds space between items */
+}
+
+/* Styling for each card */
+.card {
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Add padding to the card body */
+.card-body {
+    padding: 20px;
+    text-align: center; /* Center text */
+}
+
+/* Medicine name (card title) styling */
+.card-title {
+    color: #007bff; /* Blue title */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Description (card text) styling */
+.card-text {
+    font-size: 1.1rem;
+    color: #555; /* Slightly darker grey */
+}
+
+/* Hover effect for each card */
+.card:hover {
+    transform: translateY(-5px); /* Lift the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Increase shadow */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 100%; /* Full width on small screens */
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .col-md-4 {
+        flex: 0 0 48%; /* Two items per row on medium screens */
+        max-width: 48%;
+    }
+}
+
+/* Ensuring consistent margin between items */
+.col-md-4 {
+    margin-bottom: 20px;
+}
+
+/* Adding some space between title and description */
+.card-title {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .footer-content .col-lg-3 {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #home h2 {
+        font-size: 2.5rem; /* Smaller text for mobile */
+    }
+    
+    #home p {
+        font-size: 1rem; /* Smaller text for mobile */
+    }
+    
+    .carousel-item img {
+        height: 300px; /* Smaller height for mobile */
+    }
+}
